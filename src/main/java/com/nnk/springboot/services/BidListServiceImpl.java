@@ -22,15 +22,15 @@ public class BidListServiceImpl implements BidListService{
     }
 
     @Override
-    public Boolean updateBidList(BidList bidList) {
+    public Boolean updateBidList(int id, BidList bidList) {
         boolean updated = false;
-        Integer bidListId = bidList.getBidListId();
-        Optional<BidList> optionalBidList = bidListRepository.findById(bidListId);
-        if (optionalBidList.isPresent()) {
-            BidList oldBidList = optionalBidList.get();
-            oldBidList.setAccount(bidList.getAccount());
-            oldBidList.setType(bidList.getType());
-            oldBidList.setBidQuantity(bidList.getBidQuantity());
+        Optional<BidList> list = bidListRepository.findById(id);
+        if (list.isPresent()) {
+            BidList newBidList = list.get();
+            newBidList.setAccount(bidList.getAccount());
+            newBidList.setType(bidList.getType());
+            newBidList.setBidQuantity(bidList.getBidQuantity());
+            bidListRepository.save(newBidList);
             updated = true;
         }
         return updated;
@@ -44,19 +44,14 @@ public class BidListServiceImpl implements BidListService{
 
     @Override
     public BidList findById(int id) {
-        Optional<BidList> optionalBidList = bidListRepository.findById(id);
-        return optionalBidList.orElse(null);
+        Optional<BidList> list = bidListRepository.findById(id);
+        return list.orElse(null);
     }
 
     @Override
-    public Boolean deleteById(int id) {
-        boolean deleted = false;
+    public void deleteById(int id) {
         Optional<BidList> optionalBidList = bidListRepository.findById(id);
-        if (optionalBidList.isPresent()) {
-            bidListRepository.delete(optionalBidList.get());
-            deleted = true;
-        }
-        return deleted;
+        optionalBidList.ifPresent(bidListRepository::delete);
     }
 
 }

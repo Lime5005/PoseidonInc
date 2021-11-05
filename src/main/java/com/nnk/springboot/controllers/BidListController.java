@@ -64,9 +64,10 @@ public class BidListController {
         if (result.hasErrors()) {
             return "bidList/update";
         }
-        bidList.setBidListId(id);
-        bidListService.insertBidList(bidList);
-        model.addAttribute("bidLists", bidListService.findAll());
+        Boolean updated = bidListService.updateBidList(id, bidList);
+        if (updated) {
+            model.addAttribute("bidLists", bidListService.findAll());
+        }
         return "redirect:/bidList/list";
     }
 
