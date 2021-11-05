@@ -23,10 +23,9 @@ public class CurvePoint {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @NotNull
     private Integer id;
 
-    @NotBlank(message = "CurveId is mandatory")
+    @NotNull(message = "CurveId is mandatory")
     private Integer curveId;
 
     private Double term;
