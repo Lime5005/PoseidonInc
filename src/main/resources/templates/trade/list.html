@@ -38,17 +38,17 @@
 			</thead>
 			<tbody>
 			<!-- TODO: Show all Trade to the table, the Action column will have Edit & Delete buttons -->
-			<tr th:each="trade : ${trades}">
+				<tr th:each="trade : ${trades}">
 
-				<td style="width: 10%" th:text="${trade.tradeId}">ID</td>
-				<td th:text="${trade.account}">Trade Account</td>
-				<td style="width: 25%" th:text="${trade.type}">Trade Type</td>
-				<td th:text="${trade.buyQuantity}">Buy Quantity</td>
-				<td style="width: 15%" class="text-center">
-					<a th:href="@{/trade/update/{id}(id=${trade.getTradeId()})}">Edit &nbsp;</a>&nbsp;|&nbsp;
-					<a th:href="@{/trade/delete/{id}(id=${trade.getTradeId()})}">Delete</a>
-				</td>
-			</tr>
+					<td style="width: 10%" th:text="${trade.tradeId}">ID</td>
+					<td th:text="${trade.account}">Trade Account</td>
+					<td style="width: 25%" th:text="${trade.type}">Trade Type</td>
+					<td th:text="${trade.buyQuantity}">Buy Quantity</td>
+					<td style="width: 15%" class="text-center">
+						<a th:href="@{/trade/update/{id}(id=${trade.getTradeId()})}">Edit &nbsp;</a>&nbsp;|&nbsp;
+						<a th:href="@{/trade/delete/{id}(id=${trade.getTradeId()})}">Delete</a>
+					</td>
+				</tr>
 			</tbody>
 		</table>
 	</div>
