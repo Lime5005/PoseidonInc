@@ -25,7 +25,7 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="term" class="col-sm-2 control-label">Type</label>
+				<label for="term" class="col-sm-2 control-label">Term</label>
 				<div class="col-sm-10">
 					<input type="number" th:field="*{term}" name="term" id="term" class="col-4">
 					<p class="text-danger" th:if="${#fields.hasErrors('term')}" th:errors="*{term}"></p>
