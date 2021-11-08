@@ -35,4 +35,10 @@ public class Trade {
         this.account = account;
         this.type = type;
     }
+
+    public Trade(String account, String type, Double buyQuantity) {
+        this.account = account;
+        this.type = type;
+        this.buyQuantity = buyQuantity;
+    }
 }
