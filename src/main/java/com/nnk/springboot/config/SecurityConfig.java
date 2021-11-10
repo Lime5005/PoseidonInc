@@ -1,44 +1,29 @@
 package com.nnk.springboot.config;
 
-import com.nnk.springboot.domain.User;
-import com.nnk.springboot.repositories.UserRepository;
+import com.nnk.springboot.services.auth.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-import javax.sql.DataSource;
-import java.util.ArrayList;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private DataSource dataSource;
-
-    @Autowired
-    private UserRepository userRepository;
-
     @Bean
     public UserDetailsService userDetailsService() {
-        return new UserDetailsService() {
-            @Override
-            public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-                User user = userRepository.findByUsername(s);
-                if (user == null) {
-                    throw new UsernameNotFoundException("User not found with username: " + s);
-                }
-
-                return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), new ArrayList<>());
-            }
-        };
+        return new UserDetailsServiceImpl();
     }
 
     @Bean
@@ -48,23 +33,39 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
     @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService()).passwordEncoder(bCryptPasswordEncoder());
+    }
+
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http
+                .csrf().disable()
+                .authorizeRequests()
                 .antMatchers("/signup","/css/**","/js/**").permitAll()
-//                .anyRequest().authenticated()
-                .anyRequest().permitAll()
+//                .antMatchers("/user/**").hasRole("ADMIN")
+//                .antMatchers("/bidList/**", "/curvePoint/**", "/rating/**", "/ruleName/**", "/trade/**").hasRole("USER")
+                .anyRequest().authenticated()
+                .and()
+                .httpBasic()
                 .and()
                 .formLogin()
-                .loginPage("/app/login")
+                .loginPage("/login")
                 .permitAll()
                 .and()
                 .logout()
                 .permitAll();
 
         http.formLogin()
-                .defaultSuccessUrl("/home",true);
+                .defaultSuccessUrl("/",true);
         http.logout()
-                .logoutUrl("/logout")
-                .logoutSuccessUrl("/login");
+                .logoutUrl("/logout");
     }
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        //Web resources
+        web.ignoring().antMatchers("/css/**");
+    }
+
 }

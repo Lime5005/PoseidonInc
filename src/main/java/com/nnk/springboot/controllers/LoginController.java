@@ -1,30 +1,59 @@
 package com.nnk.springboot.controllers;
 
+import com.nnk.springboot.domain.User;
+import com.nnk.springboot.repositories.BidListRepository;
 import com.nnk.springboot.repositories.UserRepository;
+import com.nnk.springboot.services.BidListService;
+import com.nnk.springboot.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.security.Principal;
+import java.util.Objects;
+
 @Controller
-@RequestMapping("/app")
+@RequestMapping
 public class LoginController {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserService userService;
+
+    @Autowired
+    private BidListService bidListService;
 
     @GetMapping("/login")
-    public ModelAndView login() {
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("login");
-        return mav;
+    public String login(Model model) {
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public String getHome(Principal principal, Model model) {
+        Authentication authentication = (Authentication) principal;
+        Object princpl = authentication.getPrincipal();
+        String name = princpl.getClass().getName();
+        System.out.println(name + " === name");
+        User user = userService.findByUsername(name);
+        if (Objects.equals(user.getRole(), "ADMIN")) {
+            model.addAttribute("users", userService.findAll());
+            return "redirect: user/list";
+        }
+        if (user.getRole().equals("USER")) {
+            model.addAttribute("bidLists", bidListService.findAll());
+        }
+        return "redirect: bidList/list";
+
     }
 
     @GetMapping("/secure/article-details")
     public ModelAndView getAllUserArticles() {
         ModelAndView mav = new ModelAndView();
-        mav.addObject("users", userRepository.findAll());
+        mav.addObject("users", userService.findAll());
         mav.setViewName("user/list");
         return mav;
     }
