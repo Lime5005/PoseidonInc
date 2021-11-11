@@ -7,6 +7,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -34,6 +35,22 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findById(int id) {
         return userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+    }
+
+    @Override
+    public Boolean updateUser(int id, User user) {
+        boolean updated = false;
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (optionalUser.isPresent()) {
+            User newUser = optionalUser.get();
+            newUser.setFullname(user.getFullname());
+            newUser.setUsername(user.getUsername());
+            newUser.setPassword(encoder.encode(user.getPassword()));
+            newUser.setRole(user.getRole());
+            userRepository.save(newUser);
+            updated = true;
+        }
+        return updated;
     }
 
     @Override
