@@ -1,11 +1,9 @@
 package com.nnk.springboot.controllers;
 
 import com.nnk.springboot.domain.User;
-import com.nnk.springboot.repositories.UserRepository;
 import com.nnk.springboot.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -35,7 +33,13 @@ public class UserController {
 
     @PostMapping("/user/validate")
     public String validate(@Valid User user, BindingResult result, Model model) {
-        if (!result.hasErrors()) {
+        String duplicateError = null;
+        User existsUser = userService.findByUsername(user.getUsername());
+        if (existsUser != null) {
+            duplicateError = "The username already exists";
+            model.addAttribute("duplicateError", true);
+        }
+        if (duplicateError == null && (!result.hasErrors())) {
             userService.save(user);
             model.addAttribute("users", userService.findAll());
             return "redirect:/user/list";
@@ -54,13 +58,22 @@ public class UserController {
     @PostMapping("/user/update/{id}")
     public String updateUser(@PathVariable("id") Integer id, @Valid User user,
                              BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            return "user/update";
+        String duplicateError = null;
+        // Username CAN be the same when update
+        User userToUpdate = userService.findById(id);
+        User existsUser = userService.findByUsername(user.getUsername());
+        if (!userToUpdate.getUsername().equals(user.getUsername())) {
+            if (existsUser != null) {
+                duplicateError = "The username already exists";
+                model.addAttribute("duplicateError", true);
+            }
         }
-        Boolean updated = userService.updateUser(id, user);
-        if (updated) {
-            model.addAttribute("users", userService.findAll());
-            return "redirect:/user/list";
+        if (duplicateError == null && (!result.hasErrors())) {
+            Boolean updated = userService.updateUser(id, user);
+            if (updated) {
+                model.addAttribute("users", userService.findAll());
+                return "redirect:/user/list";
+            }
         }
         return "user/update";
     }

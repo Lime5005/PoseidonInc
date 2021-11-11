@@ -26,6 +26,9 @@ public class MyErrorController implements ErrorController {
             if(statusCode == HttpStatus.BAD_REQUEST.value() || statusCode == HttpStatus.FORBIDDEN.value()) {
                 return "403";
             }
+            if(statusCode == HttpStatus.METHOD_NOT_ALLOWED.value()) {
+                return "405";
+            }
             else if(statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
                 return "error-500";
             }

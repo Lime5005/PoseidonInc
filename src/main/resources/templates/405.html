@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+      <title>Error 405</title>
+</head>
+<body>
+   <h3>User name duplicate</h3>
+   <div>
+	    Logged in user: <b th:inline="text"  class="user"> [[${#httpServletRequest.remoteUser}]] </b>
+
+   </div> 	 
+    <p class="error">Username has been used, please change another. Go back to <a th:href="@{/signup}">Sign up</a></p>
+</body>
+</html>   

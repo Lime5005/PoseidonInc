@@ -19,7 +19,7 @@ public class User {
     @NotBlank(message = "FullName is mandatory")
     private String fullname;
     @NotBlank(message = "Role is mandatory")
-    private String role;
+    private String role = "USER";
 
     public Integer getId() {
         return id;
