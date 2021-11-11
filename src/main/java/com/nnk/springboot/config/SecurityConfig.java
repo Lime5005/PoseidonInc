@@ -1,6 +1,7 @@
 package com.nnk.springboot.config;
 
 import com.nnk.springboot.services.auth.UserDetailsServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -14,6 +15,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    private MyAuthenticationSuccessHandler myAuthenticationSuccessHandler;
+
+    @Autowired
+    public SecurityConfig(MyAuthenticationSuccessHandler myAuthenticationSuccessHandler) {
+        this.myAuthenticationSuccessHandler = myAuthenticationSuccessHandler;
+    }
 
     @Bean
     public UserDetailsService userDetailsService() {
@@ -43,13 +50,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .loginPage("/login")
+                .successHandler(myAuthenticationSuccessHandler)
                 .permitAll()
                 .and()
                 .logout()
                 .permitAll();
 
-        http.formLogin()
-                .defaultSuccessUrl("/",true);
+//        http.formLogin()
+//                .defaultSuccessUrl("/",true);
         http.logout()
                 .logoutUrl("/logout");
     }
