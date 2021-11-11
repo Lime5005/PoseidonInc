@@ -18,6 +18,9 @@
             <div class="alert alert-danger" th:if="${signupError}">
                 <span>Username already exists, please change another username.</span>
             </div>
+            <div class="alert alert-danger" th:if="${patternError}">
+                <span>Password doesn't match the pattern, please change the password.</span>
+            </div>
             <div class="form-group">
                 <label for="fullname">Full Name</label>
                 <div class="form-group">
@@ -35,7 +38,7 @@
             <div class="form-group">
                 <label for="password">Password: (At least 8 characters, with one uppercase letter, one number, and one special character)</label>
                 <div class="form-group">
-                    <input type="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" class="form-control" name="password" th:field="*{password}" id="password" placeholder="&#xf069; &nbsp;&nbsp;Password" style="font-family:Arial, FontAwesome">
+                    <input type="password" class="form-control" name="password" th:field="*{password}" id="password" placeholder="&#xf069; &nbsp;&nbsp;Password" style="font-family:Arial, FontAwesome">
                                         <p class="text-danger" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
                 </div>
             </div>

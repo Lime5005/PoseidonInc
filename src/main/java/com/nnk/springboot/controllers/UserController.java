@@ -1,6 +1,7 @@
 package com.nnk.springboot.controllers;
 
 import com.nnk.springboot.domain.User;
+import com.nnk.springboot.services.MyPasswordValidator;
 import com.nnk.springboot.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -34,12 +35,21 @@ public class UserController {
     @PostMapping("/user/validate")
     public String validate(@Valid User user, BindingResult result, Model model) {
         String duplicateError = null;
+        String patternError = null;
+        // Validate username
         User existsUser = userService.findByUsername(user.getUsername());
         if (existsUser != null) {
             duplicateError = "The username already exists";
             model.addAttribute("duplicateError", true);
         }
-        if (duplicateError == null && (!result.hasErrors())) {
+        // Validate password
+        String userPassword = user.getPassword();
+        boolean valid = MyPasswordValidator.isValid(userPassword);
+        if (!valid) {
+            patternError = "Password doesn't match the pattern";
+            model.addAttribute("patternError", true);
+        }
+        if (duplicateError == null && patternError == null && (!result.hasErrors())) {
             userService.save(user);
             model.addAttribute("users", userService.findAll());
             return "redirect:/user/list";
@@ -59,6 +69,7 @@ public class UserController {
     public String updateUser(@PathVariable("id") Integer id, @Valid User user,
                              BindingResult result, Model model) {
         String duplicateError = null;
+        String patternError = null;
         // Username CAN be the same when update
         User userToUpdate = userService.findById(id);
         User existsUser = userService.findByUsername(user.getUsername());
@@ -68,7 +79,14 @@ public class UserController {
                 model.addAttribute("duplicateError", true);
             }
         }
-        if (duplicateError == null && (!result.hasErrors())) {
+        // Validate password
+        String userPassword = user.getPassword();
+        boolean valid = MyPasswordValidator.isValid(userPassword);
+        if (!valid) {
+            patternError = "Password doesn't match the pattern";
+            model.addAttribute("patternError", true);
+        }
+        if (duplicateError == null && patternError == null && (!result.hasErrors())) {
             Boolean updated = userService.updateUser(id, user);
             if (updated) {
                 model.addAttribute("users", userService.findAll());

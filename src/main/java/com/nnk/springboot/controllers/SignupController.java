@@ -1,6 +1,7 @@
 package com.nnk.springboot.controllers;
 
 import com.nnk.springboot.domain.User;
+import com.nnk.springboot.services.MyPasswordValidator;
 import com.nnk.springboot.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,24 +35,28 @@ public class SignupController {
     private String signupUser(@Valid @ModelAttribute("user") User user,
                               BindingResult result, Model model, RedirectAttributes redirAttrs) {
         String signupError = null;
+        String patternError = null;
+        // Validate username
         User existsUser = userService.findByUsername(user.getUsername());
         if (existsUser != null) {
             signupError = "The username already exists";
+            model.addAttribute("signupError", true);
         }
-        if (signupError == null) {
+        // Validate password
+        String userPassword = user.getPassword();
+        boolean valid = MyPasswordValidator.isValid(userPassword);
+        if (!valid) {
+            patternError = "Password doesn't match the pattern";
+            model.addAttribute("patternError", true);
+        }
+        if (signupError == null && patternError == null && (!result.hasErrors())) {
             userService.save(user);
-        }
-
-        if (signupError == null && !result.hasErrors()) {
             redirAttrs.addFlashAttribute("message", "You've successfully signed up, please login.");
             return "redirect:/login";
-        } else {
-            model.addAttribute("signupError", true);
         }
 
         return "signup";
 
     }
-
 
 }
