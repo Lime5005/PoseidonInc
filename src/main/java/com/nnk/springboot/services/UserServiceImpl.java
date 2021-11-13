@@ -2,6 +2,8 @@ package com.nnk.springboot.services;
 
 import com.nnk.springboot.domain.User;
 import com.nnk.springboot.repositories.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,7 @@ import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
+    Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     private final UserRepository userRepository;
 
@@ -24,7 +27,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findByUsername(String username) {
-        return userRepository.findByUsername(username);
+        User user = userRepository.findByUsername(username);
+        if (user != null) {
+            logger.info("Query to find User with username " + username);
+            return user;
+        } else {
+            logger.error("Failed to find User with username " + username);
+        }
+        return null;
     }
 
     @Override
@@ -34,7 +44,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findById(int id) {
-        return userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (optionalUser.isPresent()) {
+            logger.info("Query to find User with id " + id);
+            return optionalUser.get();
+        } else {
+            logger.error("Failed to find User with id " + id);
+        }
+        return null;
     }
 
     @Override
@@ -49,6 +66,9 @@ public class UserServiceImpl implements UserService {
             newUser.setRole(user.getRole());
             userRepository.save(newUser);
             updated = true;
+            logger.info("User with id " + id + " is updated as " + newUser);
+        } else {
+            logger.error("Failed to update User with id " + id + " as " + user);
         }
         return updated;
     }
@@ -61,10 +81,12 @@ public class UserServiceImpl implements UserService {
         newUser.setRole(user.getRole());
         newUser.setPassword(encoder.encode(user.getPassword()));
         userRepository.save(newUser);
+        logger.info("New User " + newUser + " is created!");
     }
 
     @Override
     public void delete(User user) {
         userRepository.delete(user);
+        logger.info("User " + user + " is deleted!");
     }
 }
