@@ -10,8 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -43,7 +42,7 @@ public class BidServiceTest {
     @Test
     public void test1_FindAllBidList() {
         List<BidList> lists = bidListService.findAll();
-        assertEquals(1, lists.size());
+        assertTrue(lists.size() > 0);
     }
 
     @Test
@@ -70,8 +69,8 @@ public class BidServiceTest {
     public void test4_DeleteBidListById() {
         Integer bidListId = bidList.getBidListId();
         bidListService.deleteById(bidListId);
-        List<BidList> lists = bidListService.findAll();
-        assertEquals(0, lists.size());
+        BidList byId = bidListService.findById(bidListId);
+        assertNull(byId);
     }
 
 

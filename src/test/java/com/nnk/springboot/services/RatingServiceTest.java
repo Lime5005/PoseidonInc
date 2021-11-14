@@ -53,8 +53,8 @@ public class RatingServiceTest {
 
         // Delete
         ratingService.deleteById(id);
-        List<Rating> list = ratingService.findAll();
-        assertEquals(0, list.size());
+        Rating rating1 = ratingService.findById(id);
+        assertNull(rating1);
     }
 
 

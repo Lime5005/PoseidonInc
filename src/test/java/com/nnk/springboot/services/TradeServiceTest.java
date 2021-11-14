@@ -16,9 +16,6 @@ public class TradeServiceTest {
     @Autowired
     private TradeServiceImpl tradeService;
 
-    @Autowired
-    private TradeRepository tradeRepository;
-
     @Test
     public void testTradeService() {
         Trade trade = new Trade("acc1", "type1", 10.0);
@@ -45,9 +42,8 @@ public class TradeServiceTest {
 
         // Delete
         tradeService.deleteById(id);
-        List<Trade> list = tradeService.findAll();
-        assertEquals(0, list.size());
-
+        Trade trade1 = tradeService.findById(id);
+        assertNull(trade1);
     }
 
 }

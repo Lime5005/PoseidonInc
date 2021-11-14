@@ -27,34 +27,6 @@ public class CurvePointServiceTest {
         curvePointRepository.deleteAll();
     }
 
-//    @Test
-//    public void testCurvePointService() {
-//        CurvePoint curvePoint = new CurvePoint(10, 10.0, 10.0);
-//        // Save
-//        curvePointService.insertCurvePoint(curvePoint);
-//        List<CurvePoint> curvePoints = curvePointRepository.findAll();
-//        assertFalse(curvePoints.size() <= 0);
-//        assertEquals( 10.0, curvePoint.getTerm(), 0.01);
-//
-//        // Update
-//        Integer id = curvePoint.getId();
-//        curvePoint.setCurveId(20);
-//        curvePoint.setTerm(20.0);
-//        curvePoint.setValue(20.0);
-//        Boolean updated = curvePointService.updateCurvePoint(id, curvePoint);
-//        assertTrue(updated);
-//        assertEquals(20.0, curvePoint.getTerm(), 0.01);
-//
-//        // Find
-//        List<CurvePoint> all = curvePointService.findAll();
-//        assertTrue(all.size() > 0);
-//
-//        // Delete
-//        curvePointService.deleteById(id);
-//        List<CurvePoint> points = curvePointService.findAll();
-//        assertTrue(points.size() <= 0);
-//    }
-
     @BeforeAll
     public void init() {
         curvePoint.setCurveId(9);
@@ -66,7 +38,7 @@ public class CurvePointServiceTest {
     @Test
     public void test1_FindAllCurvePoint() {
         List<CurvePoint> curvePoints = curvePointService.findAll();
-        assertEquals(1, curvePoints.size());
+        assertTrue( curvePoints.size() > 0);
     }
 
     @Test
@@ -91,8 +63,8 @@ public class CurvePointServiceTest {
     public void test4_DeleteById() {
         Integer id = curvePoint.getId();
         curvePointService.deleteById(id);
-        List<CurvePoint> curvePoints = curvePointService.findAll();
-        assertEquals(0, curvePoints.size());
+        CurvePoint byId = curvePointService.findById(id);
+        assertNull(byId);
     }
 
 }

@@ -43,8 +43,8 @@ public class RuleNameServiceTest {
 
         // Delete
         ruleNameService.deleteById(id);
-        List<RuleName> list = ruleNameService.findAll();
-        assertEquals(0, list.size());
+        RuleName ruleName1 = ruleNameService.findById(id);
+        assertNull(ruleName1);
 
     }
 }
