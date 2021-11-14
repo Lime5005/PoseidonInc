@@ -1,35 +1,840 @@
-2021-11-13 15:16:34.853  === [restartedMain] === INFO  === com.nnk.springboot.Application ===  Starting Application on limes-macbook-pro.home with PID 61996 (/Users/lime/IdeaProjects/Openclassrooms/Poseidon/target/classes started by lime in /Users/lime/IdeaProjects/Openclassrooms/Poseidon)
-2021-11-13 15:16:34.855  === [restartedMain] === DEBUG === com.nnk.springboot.Application ===  Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
-2021-11-13 15:16:34.857  === [restartedMain] === INFO  === com.nnk.springboot.Application ===  No active profile set, falling back to default profiles: default
-2021-11-13 15:16:34.920  === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ===  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-11-13 15:16:34.921  === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ===  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-11-13 15:16:35.882  === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Bootstrapping Spring Data repositories in DEFAULT mode.
-2021-11-13 15:16:36.036  === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Finished Spring Data repository scanning in 150ms. Found 6 repository interfaces.
-2021-11-13 15:16:36.466  === [restartedMain] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ===  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$921dfc9c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-11-13 15:16:36.833  === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ===  Tomcat initialized with port(s): 8080 (http)
-2021-11-13 15:16:36.861  === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ===  Starting service [Tomcat]
-2021-11-13 15:16:36.861  === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ===  Starting Servlet engine: [Apache Tomcat/9.0.19]
-2021-11-13 15:16:36.933  === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ===  Initializing Spring embedded WebApplicationContext
-2021-11-13 15:16:36.933  === [restartedMain] === INFO  === org.springframework.web.context.ContextLoader ===  Root WebApplicationContext: initialization completed in 2012 ms
-2021-11-13 15:16:37.272  === [restartedMain] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Starting...
-2021-11-13 15:16:37.356  === [restartedMain] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Start completed.
-2021-11-13 15:16:37.897  === [restartedMain] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-13 15:16:37.949  === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ===  LiveReload server is running on port 35729
-2021-11-13 15:16:38.352  === [restartedMain] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: Ant [pattern='/css/**'], []
-2021-11-13 15:16:38.366  === [restartedMain] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@667852f, org.springframework.security.web.context.SecurityContextPersistenceFilter@697cc52, org.springframework.security.web.header.HeaderWriterFilter@573890ea, org.springframework.security.web.authentication.logout.LogoutFilter@46223fe9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1ef45b30, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52c2b0a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1728d5cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37a76f2b, org.springframework.security.web.session.SessionManagementFilter@3c03026c, org.springframework.security.web.access.ExceptionTranslationFilter@457f03eb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@727464c8]
-2021-11-13 15:16:38.458  === [restartedMain] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Initializing ExecutorService 'applicationTaskExecutor'
-2021-11-13 15:16:38.474  === [restartedMain] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration ===  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-13 15:16:38.688  === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ===  Tomcat started on port(s): 8080 (http) with context path ''
-2021-11-13 15:16:38.693  === [restartedMain] === INFO  === com.nnk.springboot.Application ===  Started Application in 4.122 seconds (JVM running for 4.864)
-2021-11-13 15:16:42.136  === [http-nio-8080-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ===  Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-13 15:16:42.136  === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ===  Initializing Servlet 'dispatcherServlet'
-2021-11-13 15:16:42.142  === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ===  Completed initialization in 6 ms
-2021-11-13 15:17:06.539  === [http-nio-8080-exec-1] === INFO  === com.nnk.springboot.services.BidListServiceImpl ===  New BidList BidList(BidListId=162, account=account1, type=type1, bidQuantity=10.0) is created!
-2021-11-13 15:17:37.611  === [http-nio-8080-exec-4] === INFO  === com.nnk.springboot.services.BidListServiceImpl ===  Query to find BidList with id 162
-2021-11-13 15:17:44.333  === [http-nio-8080-exec-7] === INFO  === com.nnk.springboot.services.BidListServiceImpl ===  BidList with id 162 is updated as BidList(BidListId=162, account=account, type=type, bidQuantity=100.0)
-2021-11-13 15:17:58.191  === [http-nio-8080-exec-10] === INFO  === com.nnk.springboot.services.BidListServiceImpl ===  Query to find BidList with id 162
-2021-11-13 15:17:58.209  === [http-nio-8080-exec-10] === INFO  === com.nnk.springboot.services.BidListServiceImpl ===  BidList with id 162 is deleted!
-2021-11-13 15:18:06.705  === [Thread-8] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Shutting down ExecutorService 'applicationTaskExecutor'
-2021-11-13 15:18:06.706  === [Thread-8] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-11-13 15:18:06.709  === [Thread-8] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown initiated...
-2021-11-13 15:18:06.714  === [Thread-8] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown completed.
+2021-11-14 00:34:36.436  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Starting BidListControllerTest on limes-macbook-pro.home with PID 66514 (started by lime in /Users/lime/IdeaProjects/Openclassrooms/Poseidon)
+2021-11-14 00:34:36.440  === [main] === DEBUG === c.nnk.springboot.controllers.BidListControllerTest ===  Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-11-14 00:34:36.442  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  No active profile set, falling back to default profiles: default
+2021-11-14 00:34:36.484  === [main] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@13e547a9
+2021-11-14 00:34:38.180  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-14 00:34:38.355  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Finished Spring Data repository scanning in 164ms. Found 6 repository interfaces.
+2021-11-14 00:34:39.122  === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ===  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ead117c9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-14 00:34:40.038  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Starting...
+2021-11-14 00:34:40.223  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Start completed.
+2021-11-14 00:34:41.127  === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 00:34:42.348  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: Ant [pattern='/css/**'], []
+2021-11-14 00:34:42.461  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@789d8fd6, org.springframework.security.web.context.SecurityContextPersistenceFilter@96dfcbb, org.springframework.security.web.header.HeaderWriterFilter@fd0e118, org.springframework.security.web.authentication.logout.LogoutFilter@39b95a80, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4ae6451d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51c6e775, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e0e0ba7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42fa5cb, org.springframework.security.web.session.SessionManagementFilter@34b462e0, org.springframework.security.web.access.ExceptionTranslationFilter@16890f00, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7adbec34]
+2021-11-14 00:34:42.903  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-11-14 00:34:43.172  === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-14 00:34:43.190  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerAdapter ===  ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-14 00:34:43.267  === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration ===  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-14 00:34:43.448  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  42 mappings in 'requestMappingHandlerMapping'
+2021-11-14 00:34:43.506  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-14 00:34:43.525  === [main] === DEBUG === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ===  ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-14 00:34:44.020  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping filters: springSecurityFilterChain urls=[/*], characterEncodingFilter urls=[/*], hiddenHttpMethodFilter urls=[/*], formContentFilter urls=[/*], requestContextFilter urls=[/*]
+2021-11-14 00:34:44.022  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping servlets: 
+2021-11-14 00:34:44.049  === [main] === INFO  === o.s.b.test.mock.web.SpringBootMockServletContext ===  Initializing Spring TestDispatcherServlet ''
+2021-11-14 00:34:44.050  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Initializing Servlet ''
+2021-11-14 00:34:44.076  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Completed initialization in 26 ms
+2021-11-14 00:34:44.120  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Started BidListControllerTest in 8.163 seconds (JVM running for 9.934)
+2021-11-14 00:34:44.345  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.deleteBid(java.lang.Integer,org.springframework.ui.Model)
+2021-11-14 00:34:44.398  === [main] === ERROR === com.nnk.springboot.services.BidListServiceImpl ===  Failed to find BidList with id 0
+2021-11-14 00:34:44.428  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.addBidForm(com.nnk.springboot.domain.BidList)
+2021-11-14 00:34:44.450  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:34:44.917  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.validate(com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 00:34:45.000  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:34:45.052  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.updateBid(java.lang.Integer,com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 00:34:45.060  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:34:45.192  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.showUpdateForm(java.lang.Integer,org.springframework.ui.Model)
+2021-11-14 00:34:45.197  === [main] === ERROR === com.nnk.springboot.services.BidListServiceImpl ===  Failed to find BidList with id 0
+2021-11-14 00:34:45.198  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:34:45.207  === [main] === ERROR === org.thymeleaf.TemplateEngine ===  [THYMELEAF][main] Exception processing template "bidList/update": Exception evaluating SpringEL expression: "bidList.bidListId" (template: "bidList/update" - line 16, col 20)
+org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "bidList.bidListId" (template: "bidList/update" - line 16, col 20)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.LinkExpression.resolveParameters(LinkExpression.java:337)
+	at org.thymeleaf.standard.expression.LinkExpression.executeLinkExpression(LinkExpression.java:283)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:85)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:592)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1371)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.render(TestDispatcherServlet.java:135)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1117)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:71)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:166)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:182)
+	at com.nnk.springboot.controllers.BidListControllerTest.testGetUpdateForm_4(BidListControllerTest.java:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:532)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:171)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:167)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:114)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:59)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:108)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'bidListId' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:109)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 118 common frames omitted
+2021-11-14 00:34:45.232  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.home(org.springframework.ui.Model)
+2021-11-14 00:34:45.241  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:34:45.292  === [Thread-3] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Closing org.springframework.web.context.support.GenericWebApplicationContext@13e547a9, started on Sun Nov 14 00:34:36 CET 2021
+2021-11-14 00:34:45.297  === [Thread-3] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-14 00:34:45.300  === [Thread-3] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 00:34:45.303  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown initiated...
+2021-11-14 00:34:45.314  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown completed.
+2021-11-14 00:42:48.318  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Starting BidListControllerTest on limes-macbook-pro.home with PID 66548 (started by lime in /Users/lime/IdeaProjects/Openclassrooms/Poseidon)
+2021-11-14 00:42:48.319  === [main] === DEBUG === c.nnk.springboot.controllers.BidListControllerTest ===  Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-11-14 00:42:48.322  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  No active profile set, falling back to default profiles: default
+2021-11-14 00:42:48.344  === [main] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5e8ac0e1
+2021-11-14 00:42:49.680  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-14 00:42:49.904  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Finished Spring Data repository scanning in 217ms. Found 6 repository interfaces.
+2021-11-14 00:42:50.596  === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ===  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6595898c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-14 00:42:51.533  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Starting...
+2021-11-14 00:42:51.695  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Start completed.
+2021-11-14 00:42:52.485  === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 00:42:53.842  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: Ant [pattern='/css/**'], []
+2021-11-14 00:42:53.924  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64b8eb96, org.springframework.security.web.context.SecurityContextPersistenceFilter@74844216, org.springframework.security.web.header.HeaderWriterFilter@144dc2f7, org.springframework.security.web.authentication.logout.LogoutFilter@188ae8d2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5c34b0f2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62f6185a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51c6e775, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@776a7ec6, org.springframework.security.web.session.SessionManagementFilter@19677add, org.springframework.security.web.access.ExceptionTranslationFilter@eebd983, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@184bb873]
+2021-11-14 00:42:54.226  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-11-14 00:42:54.428  === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-14 00:42:54.440  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerAdapter ===  ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-14 00:42:54.486  === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration ===  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-14 00:42:54.576  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  42 mappings in 'requestMappingHandlerMapping'
+2021-11-14 00:42:54.630  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-14 00:42:54.648  === [main] === DEBUG === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ===  ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-14 00:42:55.032  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping filters: springSecurityFilterChain urls=[/*], characterEncodingFilter urls=[/*], hiddenHttpMethodFilter urls=[/*], formContentFilter urls=[/*], requestContextFilter urls=[/*]
+2021-11-14 00:42:55.033  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping servlets: 
+2021-11-14 00:42:55.060  === [main] === INFO  === o.s.b.test.mock.web.SpringBootMockServletContext ===  Initializing Spring TestDispatcherServlet ''
+2021-11-14 00:42:55.061  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Initializing Servlet ''
+2021-11-14 00:42:55.088  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Completed initialization in 27 ms
+2021-11-14 00:42:55.137  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Started BidListControllerTest in 7.285 seconds (JVM running for 8.933)
+2021-11-14 00:42:55.363  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.deleteBid(java.lang.Integer,org.springframework.ui.Model)
+2021-11-14 00:42:55.426  === [main] === ERROR === com.nnk.springboot.services.BidListServiceImpl ===  Failed to find BidList with id 0
+2021-11-14 00:42:55.459  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.addBidForm(com.nnk.springboot.domain.BidList)
+2021-11-14 00:42:55.480  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:42:55.953  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.validate(com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 00:42:56.049  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:42:56.093  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.updateBid(java.lang.Integer,com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 00:42:56.101  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:42:56.151  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.showUpdateForm(java.lang.Integer,org.springframework.ui.Model)
+2021-11-14 00:42:56.163  === [main] === ERROR === com.nnk.springboot.services.BidListServiceImpl ===  Failed to find BidList with id 0
+2021-11-14 00:42:56.164  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:42:56.174  === [main] === ERROR === org.thymeleaf.TemplateEngine ===  [THYMELEAF][main] Exception processing template "bidList/update": Exception evaluating SpringEL expression: "bidList.bidListId" (template: "bidList/update" - line 16, col 20)
+org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "bidList.bidListId" (template: "bidList/update" - line 16, col 20)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.LinkExpression.resolveParameters(LinkExpression.java:337)
+	at org.thymeleaf.standard.expression.LinkExpression.executeLinkExpression(LinkExpression.java:283)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:85)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:592)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1371)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.render(TestDispatcherServlet.java:135)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1117)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:71)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:166)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:182)
+	at com.nnk.springboot.controllers.BidListControllerTest.testGetUpdateForm_4(BidListControllerTest.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:532)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:171)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:167)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:114)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:59)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:108)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'bidListId' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:109)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 118 common frames omitted
+2021-11-14 00:42:56.200  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.home(org.springframework.ui.Model)
+2021-11-14 00:42:56.285  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:42:56.349  === [Thread-3] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Closing org.springframework.web.context.support.GenericWebApplicationContext@5e8ac0e1, started on Sun Nov 14 00:42:48 CET 2021
+2021-11-14 00:42:56.361  === [Thread-3] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-14 00:42:56.366  === [Thread-3] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 00:42:56.379  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown initiated...
+2021-11-14 00:42:56.396  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown completed.
+2021-11-14 00:43:50.850  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Starting BidListControllerTest on limes-macbook-pro.home with PID 66558 (started by lime in /Users/lime/IdeaProjects/Openclassrooms/Poseidon)
+2021-11-14 00:43:50.851  === [main] === DEBUG === c.nnk.springboot.controllers.BidListControllerTest ===  Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-11-14 00:43:50.852  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  No active profile set, falling back to default profiles: default
+2021-11-14 00:43:50.884  === [main] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5e8ac0e1
+2021-11-14 00:43:52.163  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-14 00:43:52.290  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Finished Spring Data repository scanning in 121ms. Found 6 repository interfaces.
+2021-11-14 00:43:53.050  === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ===  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$17ff9e46] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-14 00:43:53.991  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Starting...
+2021-11-14 00:43:54.164  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Start completed.
+2021-11-14 00:43:55.007  === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 00:43:56.324  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: Ant [pattern='/css/**'], []
+2021-11-14 00:43:56.427  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56554365, org.springframework.security.web.context.SecurityContextPersistenceFilter@446f3a53, org.springframework.security.web.header.HeaderWriterFilter@56976b8b, org.springframework.security.web.authentication.logout.LogoutFilter@7bdf94f2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@20f6b6e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@96dfcbb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b82018, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@666b1244, org.springframework.security.web.session.SessionManagementFilter@5b0575d0, org.springframework.security.web.access.ExceptionTranslationFilter@1f7fcec2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58ad0586]
+2021-11-14 00:43:56.757  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-11-14 00:43:56.963  === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-14 00:43:56.977  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerAdapter ===  ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-14 00:43:57.029  === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration ===  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-14 00:43:57.114  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  42 mappings in 'requestMappingHandlerMapping'
+2021-11-14 00:43:57.171  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-14 00:43:57.195  === [main] === DEBUG === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ===  ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-14 00:43:57.525  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping filters: springSecurityFilterChain urls=[/*], characterEncodingFilter urls=[/*], hiddenHttpMethodFilter urls=[/*], formContentFilter urls=[/*], requestContextFilter urls=[/*]
+2021-11-14 00:43:57.527  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping servlets: 
+2021-11-14 00:43:57.558  === [main] === INFO  === o.s.b.test.mock.web.SpringBootMockServletContext ===  Initializing Spring TestDispatcherServlet ''
+2021-11-14 00:43:57.558  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Initializing Servlet ''
+2021-11-14 00:43:57.572  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Completed initialization in 14 ms
+2021-11-14 00:43:57.610  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Started BidListControllerTest in 7.235 seconds (JVM running for 8.896)
+2021-11-14 00:43:57.783  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.deleteBid(java.lang.Integer,org.springframework.ui.Model)
+2021-11-14 00:43:57.834  === [main] === ERROR === com.nnk.springboot.services.BidListServiceImpl ===  Failed to find BidList with id 0
+2021-11-14 00:43:57.872  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.addBidForm(com.nnk.springboot.domain.BidList)
+2021-11-14 00:43:57.900  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:43:58.378  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.validate(com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 00:43:58.523  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:43:58.592  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.updateBid(java.lang.Integer,com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 00:43:58.600  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:43:58.653  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.showUpdateForm(java.lang.Integer,org.springframework.ui.Model)
+2021-11-14 00:43:58.667  === [main] === ERROR === com.nnk.springboot.services.BidListServiceImpl ===  Failed to find BidList with id 0
+2021-11-14 00:43:58.668  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:43:58.678  === [main] === ERROR === org.thymeleaf.TemplateEngine ===  [THYMELEAF][main] Exception processing template "bidList/update": Exception evaluating SpringEL expression: "bidList.bidListId" (template: "bidList/update" - line 16, col 20)
+org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "bidList.bidListId" (template: "bidList/update" - line 16, col 20)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.LinkExpression.resolveParameters(LinkExpression.java:337)
+	at org.thymeleaf.standard.expression.LinkExpression.executeLinkExpression(LinkExpression.java:283)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:85)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:592)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1371)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.render(TestDispatcherServlet.java:135)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1117)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:71)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:166)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:182)
+	at com.nnk.springboot.controllers.BidListControllerTest.testGetUpdateForm_4(BidListControllerTest.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:532)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:171)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:167)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:114)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:59)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:108)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'bidListId' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:109)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 118 common frames omitted
+2021-11-14 00:43:58.696  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.home(org.springframework.ui.Model)
+2021-11-14 00:43:58.785  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:43:58.828  === [Thread-3] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Closing org.springframework.web.context.support.GenericWebApplicationContext@5e8ac0e1, started on Sun Nov 14 00:43:50 CET 2021
+2021-11-14 00:43:58.835  === [Thread-3] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-14 00:43:58.838  === [Thread-3] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 00:43:58.846  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown initiated...
+2021-11-14 00:43:58.857  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown completed.
+2021-11-14 00:58:34.421  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Starting BidListControllerTest on limes-macbook-pro.home with PID 66603 (started by lime in /Users/lime/IdeaProjects/Openclassrooms/Poseidon)
+2021-11-14 00:58:34.421  === [main] === DEBUG === c.nnk.springboot.controllers.BidListControllerTest ===  Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-11-14 00:58:34.423  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  No active profile set, falling back to default profiles: default
+2021-11-14 00:58:34.460  === [main] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3401a114
+2021-11-14 00:58:35.819  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-14 00:58:36.037  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Finished Spring Data repository scanning in 209ms. Found 6 repository interfaces.
+2021-11-14 00:58:36.683  === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ===  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3679b446] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-14 00:58:37.575  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Starting...
+2021-11-14 00:58:37.746  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Start completed.
+2021-11-14 00:58:38.550  === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 00:58:39.848  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: Ant [pattern='/css/**'], []
+2021-11-14 00:58:39.948  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58ad0586, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f4029e9, org.springframework.security.web.header.HeaderWriterFilter@73d7d676, org.springframework.security.web.authentication.logout.LogoutFilter@690677de, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3d3a28b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c5cd2ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36885319, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@526fc044, org.springframework.security.web.session.SessionManagementFilter@3023f157, org.springframework.security.web.access.ExceptionTranslationFilter@8f589d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43ca96a0]
+2021-11-14 00:58:40.294  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-11-14 00:58:40.510  === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-14 00:58:40.522  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerAdapter ===  ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-14 00:58:40.571  === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration ===  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-14 00:58:40.657  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  42 mappings in 'requestMappingHandlerMapping'
+2021-11-14 00:58:40.714  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-14 00:58:40.731  === [main] === DEBUG === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ===  ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-14 00:58:41.086  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping filters: springSecurityFilterChain urls=[/*], characterEncodingFilter urls=[/*], hiddenHttpMethodFilter urls=[/*], formContentFilter urls=[/*], requestContextFilter urls=[/*]
+2021-11-14 00:58:41.087  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping servlets: 
+2021-11-14 00:58:41.107  === [main] === INFO  === o.s.b.test.mock.web.SpringBootMockServletContext ===  Initializing Spring TestDispatcherServlet ''
+2021-11-14 00:58:41.108  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Initializing Servlet ''
+2021-11-14 00:58:41.119  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Completed initialization in 11 ms
+2021-11-14 00:58:41.153  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Started BidListControllerTest in 7.189 seconds (JVM running for 8.829)
+2021-11-14 00:58:41.338  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.home(org.springframework.ui.Model)
+2021-11-14 00:58:41.570  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:58:41.867  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.addBidForm(com.nnk.springboot.domain.BidList)
+2021-11-14 00:58:41.880  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:58:41.980  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.validate(com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 00:58:42.130  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:58:42.179  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.updateBid(java.lang.Integer,com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 00:58:42.191  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 00:58:42.232  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.deleteBid(java.lang.Integer,org.springframework.ui.Model)
+2021-11-14 00:58:42.249  === [main] === ERROR === com.nnk.springboot.services.BidListServiceImpl ===  Failed to find BidList with id 0
+2021-11-14 00:58:42.287  === [Thread-3] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Closing org.springframework.web.context.support.GenericWebApplicationContext@3401a114, started on Sun Nov 14 00:58:34 CET 2021
+2021-11-14 00:58:42.297  === [Thread-3] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-14 00:58:42.300  === [Thread-3] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 00:58:42.305  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown initiated...
+2021-11-14 00:58:42.314  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown completed.
+2021-11-14 01:05:06.614  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Starting BidListControllerTest on limes-macbook-pro.home with PID 66625 (started by lime in /Users/lime/IdeaProjects/Openclassrooms/Poseidon)
+2021-11-14 01:05:06.615  === [main] === DEBUG === c.nnk.springboot.controllers.BidListControllerTest ===  Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-11-14 01:05:06.616  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  No active profile set, falling back to default profiles: default
+2021-11-14 01:05:06.646  === [main] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@20b12f8a
+2021-11-14 01:05:07.980  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-14 01:05:08.211  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Finished Spring Data repository scanning in 220ms. Found 6 repository interfaces.
+2021-11-14 01:05:08.908  === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ===  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$84aa2a96] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-14 01:05:09.794  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Starting...
+2021-11-14 01:05:09.962  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Start completed.
+2021-11-14 01:05:10.753  === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:05:12.082  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: Ant [pattern='/css/**'], []
+2021-11-14 01:05:12.176  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b9fea11, org.springframework.security.web.context.SecurityContextPersistenceFilter@62a81453, org.springframework.security.web.header.HeaderWriterFilter@7fb5368e, org.springframework.security.web.authentication.logout.LogoutFilter@5b0575d0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5eba9e41, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a0f43dc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77e1dacd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c7cf8c4, org.springframework.security.web.session.SessionManagementFilter@1ad9d5be, org.springframework.security.web.access.ExceptionTranslationFilter@7591cbd1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37a1beb3]
+2021-11-14 01:05:12.471  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-11-14 01:05:12.721  === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:05:12.735  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerAdapter ===  ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-14 01:05:12.783  === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration ===  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-14 01:05:12.868  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  42 mappings in 'requestMappingHandlerMapping'
+2021-11-14 01:05:12.915  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-14 01:05:12.929  === [main] === DEBUG === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ===  ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-14 01:05:13.291  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping filters: springSecurityFilterChain urls=[/*], characterEncodingFilter urls=[/*], hiddenHttpMethodFilter urls=[/*], formContentFilter urls=[/*], requestContextFilter urls=[/*]
+2021-11-14 01:05:13.293  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping servlets: 
+2021-11-14 01:05:13.310  === [main] === INFO  === o.s.b.test.mock.web.SpringBootMockServletContext ===  Initializing Spring TestDispatcherServlet ''
+2021-11-14 01:05:13.311  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Initializing Servlet ''
+2021-11-14 01:05:13.322  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Completed initialization in 11 ms
+2021-11-14 01:05:13.355  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Started BidListControllerTest in 7.232 seconds (JVM running for 8.838)
+2021-11-14 01:05:13.544  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.home(org.springframework.ui.Model)
+2021-11-14 01:05:13.792  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:05:14.100  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.addBidForm(com.nnk.springboot.domain.BidList)
+2021-11-14 01:05:14.107  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:05:14.206  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.validate(com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:05:14.343  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:05:14.392  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.updateBid(java.lang.Integer,com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:05:14.406  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:05:14.444  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.deleteBid(java.lang.Integer,org.springframework.ui.Model)
+2021-11-14 01:05:14.458  === [main] === ERROR === com.nnk.springboot.services.BidListServiceImpl ===  Failed to find BidList with id 0
+2021-11-14 01:05:14.483  === [Thread-3] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Closing org.springframework.web.context.support.GenericWebApplicationContext@20b12f8a, started on Sun Nov 14 01:05:06 CET 2021
+2021-11-14 01:05:14.490  === [Thread-3] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:05:14.494  === [Thread-3] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:05:14.497  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown initiated...
+2021-11-14 01:05:14.505  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown completed.
+2021-11-14 01:07:36.040  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Starting BidListControllerTest on limes-macbook-pro.home with PID 66636 (started by lime in /Users/lime/IdeaProjects/Openclassrooms/Poseidon)
+2021-11-14 01:07:36.041  === [main] === DEBUG === c.nnk.springboot.controllers.BidListControllerTest ===  Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-11-14 01:07:36.042  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  No active profile set, falling back to default profiles: default
+2021-11-14 01:07:36.079  === [main] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@20b12f8a
+2021-11-14 01:07:37.371  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-14 01:07:37.606  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Finished Spring Data repository scanning in 224ms. Found 6 repository interfaces.
+2021-11-14 01:07:38.311  === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ===  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$557d03d3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-14 01:07:39.212  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Starting...
+2021-11-14 01:07:39.401  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Start completed.
+2021-11-14 01:07:40.221  === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:07:41.595  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: Ant [pattern='/css/**'], []
+2021-11-14 01:07:41.679  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20f6b6e0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c5d376c, org.springframework.security.web.header.HeaderWriterFilter@1f7fcec2, org.springframework.security.web.authentication.logout.LogoutFilter@117069f2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4abdd5e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@615e7fe7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b0575d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67cd84f9, org.springframework.security.web.session.SessionManagementFilter@7a71ebf1, org.springframework.security.web.access.ExceptionTranslationFilter@72bdbfe9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3d3a28b5]
+2021-11-14 01:07:42.022  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-11-14 01:07:42.221  === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:07:42.233  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerAdapter ===  ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-14 01:07:42.292  === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration ===  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-14 01:07:42.377  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  42 mappings in 'requestMappingHandlerMapping'
+2021-11-14 01:07:42.416  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-14 01:07:42.430  === [main] === DEBUG === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ===  ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-14 01:07:42.793  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping filters: springSecurityFilterChain urls=[/*], characterEncodingFilter urls=[/*], hiddenHttpMethodFilter urls=[/*], formContentFilter urls=[/*], requestContextFilter urls=[/*]
+2021-11-14 01:07:42.794  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping servlets: 
+2021-11-14 01:07:42.813  === [main] === INFO  === o.s.b.test.mock.web.SpringBootMockServletContext ===  Initializing Spring TestDispatcherServlet ''
+2021-11-14 01:07:42.813  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Initializing Servlet ''
+2021-11-14 01:07:42.825  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Completed initialization in 12 ms
+2021-11-14 01:07:42.860  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Started BidListControllerTest in 7.302 seconds (JVM running for 8.881)
+2021-11-14 01:07:43.054  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.home(org.springframework.ui.Model)
+2021-11-14 01:07:43.297  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:07:43.598  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.addBidForm(com.nnk.springboot.domain.BidList)
+2021-11-14 01:07:43.606  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:07:43.710  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.validate(com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:07:43.855  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:07:43.906  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.updateBid(java.lang.Integer,com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:07:43.917  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:07:43.979  === [Thread-3] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Closing org.springframework.web.context.support.GenericWebApplicationContext@20b12f8a, started on Sun Nov 14 01:07:36 CET 2021
+2021-11-14 01:07:43.987  === [Thread-3] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:07:43.991  === [Thread-3] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:07:43.994  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown initiated...
+2021-11-14 01:07:44.003  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown completed.
+2021-11-14 01:10:17.378  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Starting BidListControllerTest on limes-macbook-pro.home with PID 66654 (started by lime in /Users/lime/IdeaProjects/Openclassrooms/Poseidon)
+2021-11-14 01:10:17.379  === [main] === DEBUG === c.nnk.springboot.controllers.BidListControllerTest ===  Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-11-14 01:10:17.381  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  No active profile set, falling back to default profiles: default
+2021-11-14 01:10:17.418  === [main] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3401a114
+2021-11-14 01:10:18.845  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-14 01:10:19.011  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Finished Spring Data repository scanning in 157ms. Found 6 repository interfaces.
+2021-11-14 01:10:19.645  === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ===  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3679b446] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-14 01:10:20.555  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Starting...
+2021-11-14 01:10:20.722  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Start completed.
+2021-11-14 01:10:21.554  === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:10:22.930  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: Ant [pattern='/css/**'], []
+2021-11-14 01:10:23.013  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58ad0586, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f4029e9, org.springframework.security.web.header.HeaderWriterFilter@73d7d676, org.springframework.security.web.authentication.logout.LogoutFilter@690677de, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3d3a28b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c5cd2ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36885319, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@526fc044, org.springframework.security.web.session.SessionManagementFilter@3023f157, org.springframework.security.web.access.ExceptionTranslationFilter@8f589d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43ca96a0]
+2021-11-14 01:10:23.316  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-11-14 01:10:23.541  === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:10:23.554  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerAdapter ===  ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-14 01:10:23.603  === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration ===  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-14 01:10:23.703  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  42 mappings in 'requestMappingHandlerMapping'
+2021-11-14 01:10:23.746  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-14 01:10:23.764  === [main] === DEBUG === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ===  ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-14 01:10:24.102  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping filters: springSecurityFilterChain urls=[/*], characterEncodingFilter urls=[/*], hiddenHttpMethodFilter urls=[/*], formContentFilter urls=[/*], requestContextFilter urls=[/*]
+2021-11-14 01:10:24.103  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping servlets: 
+2021-11-14 01:10:24.123  === [main] === INFO  === o.s.b.test.mock.web.SpringBootMockServletContext ===  Initializing Spring TestDispatcherServlet ''
+2021-11-14 01:10:24.123  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Initializing Servlet ''
+2021-11-14 01:10:24.136  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Completed initialization in 13 ms
+2021-11-14 01:10:24.171  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Started BidListControllerTest in 7.259 seconds (JVM running for 8.743)
+2021-11-14 01:10:24.364  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.home(org.springframework.ui.Model)
+2021-11-14 01:10:24.611  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:10:24.920  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.addBidForm(com.nnk.springboot.domain.BidList)
+2021-11-14 01:10:24.927  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:10:25.009  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.validate(com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:10:25.098  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:10:25.140  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.updateBid(java.lang.Integer,com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:10:25.154  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:10:25.196  === [Thread-3] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Closing org.springframework.web.context.support.GenericWebApplicationContext@3401a114, started on Sun Nov 14 01:10:17 CET 2021
+2021-11-14 01:10:25.203  === [Thread-3] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:10:25.206  === [Thread-3] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:10:25.209  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown initiated...
+2021-11-14 01:10:25.217  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown completed.
+2021-11-14 01:11:55.230  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Starting BidListControllerTest on limes-macbook-pro.home with PID 66666 (started by lime in /Users/lime/IdeaProjects/Openclassrooms/Poseidon)
+2021-11-14 01:11:55.232  === [main] === DEBUG === c.nnk.springboot.controllers.BidListControllerTest ===  Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-11-14 01:11:55.233  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  No active profile set, falling back to default profiles: default
+2021-11-14 01:11:55.268  === [main] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3401a114
+2021-11-14 01:11:56.547  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-14 01:11:56.766  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Finished Spring Data repository scanning in 213ms. Found 6 repository interfaces.
+2021-11-14 01:11:57.483  === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ===  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3679b446] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-14 01:11:58.368  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Starting...
+2021-11-14 01:11:58.578  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Start completed.
+2021-11-14 01:11:59.415  === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:12:00.844  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: Ant [pattern='/css/**'], []
+2021-11-14 01:12:00.923  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58ad0586, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f4029e9, org.springframework.security.web.header.HeaderWriterFilter@73d7d676, org.springframework.security.web.authentication.logout.LogoutFilter@690677de, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3d3a28b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c5cd2ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36885319, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@526fc044, org.springframework.security.web.session.SessionManagementFilter@3023f157, org.springframework.security.web.access.ExceptionTranslationFilter@8f589d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43ca96a0]
+2021-11-14 01:12:01.243  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-11-14 01:12:01.470  === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:12:01.482  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerAdapter ===  ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-14 01:12:01.524  === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration ===  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-14 01:12:01.613  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  42 mappings in 'requestMappingHandlerMapping'
+2021-11-14 01:12:01.660  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-14 01:12:01.678  === [main] === DEBUG === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ===  ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-14 01:12:02.043  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping filters: springSecurityFilterChain urls=[/*], characterEncodingFilter urls=[/*], hiddenHttpMethodFilter urls=[/*], formContentFilter urls=[/*], requestContextFilter urls=[/*]
+2021-11-14 01:12:02.044  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping servlets: 
+2021-11-14 01:12:02.067  === [main] === INFO  === o.s.b.test.mock.web.SpringBootMockServletContext ===  Initializing Spring TestDispatcherServlet ''
+2021-11-14 01:12:02.067  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Initializing Servlet ''
+2021-11-14 01:12:02.078  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Completed initialization in 11 ms
+2021-11-14 01:12:02.115  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Started BidListControllerTest in 7.448 seconds (JVM running for 8.839)
+2021-11-14 01:12:02.284  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.home(org.springframework.ui.Model)
+2021-11-14 01:12:02.527  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:12:02.883  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.addBidForm(com.nnk.springboot.domain.BidList)
+2021-11-14 01:12:02.902  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:12:03.005  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.validate(com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:12:03.098  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:12:03.130  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.updateBid(java.lang.Integer,com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:12:03.142  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:12:03.177  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.deleteBid(java.lang.Integer,org.springframework.ui.Model)
+2021-11-14 01:12:03.195  === [main] === ERROR === com.nnk.springboot.services.BidListServiceImpl ===  Failed to find BidList with id 111
+2021-11-14 01:12:03.220  === [Thread-3] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Closing org.springframework.web.context.support.GenericWebApplicationContext@3401a114, started on Sun Nov 14 01:11:55 CET 2021
+2021-11-14 01:12:03.228  === [Thread-3] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:12:03.232  === [Thread-3] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:12:03.234  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown initiated...
+2021-11-14 01:12:03.241  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown completed.
+2021-11-14 01:14:05.615  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Starting BidListControllerTest on limes-macbook-pro.home with PID 66678 (started by lime in /Users/lime/IdeaProjects/Openclassrooms/Poseidon)
+2021-11-14 01:14:05.616  === [main] === DEBUG === c.nnk.springboot.controllers.BidListControllerTest ===  Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-11-14 01:14:05.621  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  No active profile set, falling back to default profiles: default
+2021-11-14 01:14:05.659  === [main] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3401a114
+2021-11-14 01:14:07.006  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-14 01:14:07.213  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Finished Spring Data repository scanning in 184ms. Found 6 repository interfaces.
+2021-11-14 01:14:07.889  === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ===  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3679b446] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-14 01:14:08.765  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Starting...
+2021-11-14 01:14:08.933  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Start completed.
+2021-11-14 01:14:09.704  === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:14:11.030  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: Ant [pattern='/css/**'], []
+2021-11-14 01:14:11.142  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58ad0586, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f4029e9, org.springframework.security.web.header.HeaderWriterFilter@73d7d676, org.springframework.security.web.authentication.logout.LogoutFilter@690677de, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3d3a28b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c5cd2ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36885319, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@526fc044, org.springframework.security.web.session.SessionManagementFilter@3023f157, org.springframework.security.web.access.ExceptionTranslationFilter@8f589d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43ca96a0]
+2021-11-14 01:14:11.489  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-11-14 01:14:11.717  === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:14:11.729  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerAdapter ===  ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-14 01:14:11.771  === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration ===  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-14 01:14:11.851  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  42 mappings in 'requestMappingHandlerMapping'
+2021-11-14 01:14:11.888  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-14 01:14:11.900  === [main] === DEBUG === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ===  ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-14 01:14:12.273  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping filters: springSecurityFilterChain urls=[/*], characterEncodingFilter urls=[/*], hiddenHttpMethodFilter urls=[/*], formContentFilter urls=[/*], requestContextFilter urls=[/*]
+2021-11-14 01:14:12.274  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping servlets: 
+2021-11-14 01:14:12.294  === [main] === INFO  === o.s.b.test.mock.web.SpringBootMockServletContext ===  Initializing Spring TestDispatcherServlet ''
+2021-11-14 01:14:12.294  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Initializing Servlet ''
+2021-11-14 01:14:12.305  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Completed initialization in 11 ms
+2021-11-14 01:14:12.340  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Started BidListControllerTest in 7.213 seconds (JVM running for 8.691)
+2021-11-14 01:14:12.523  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.home(org.springframework.ui.Model)
+2021-11-14 01:14:12.764  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:14:13.060  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.addBidForm(com.nnk.springboot.domain.BidList)
+2021-11-14 01:14:13.070  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:14:13.179  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.validate(com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:14:13.316  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:14:13.353  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.updateBid(java.lang.Integer,com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:14:13.370  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:14:13.409  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.deleteBid(java.lang.Integer,org.springframework.ui.Model)
+2021-11-14 01:14:13.430  === [main] === ERROR === com.nnk.springboot.services.BidListServiceImpl ===  Failed to find BidList with id 111
+2021-11-14 01:14:13.457  === [Thread-3] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Closing org.springframework.web.context.support.GenericWebApplicationContext@3401a114, started on Sun Nov 14 01:14:05 CET 2021
+2021-11-14 01:14:13.464  === [Thread-3] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:14:13.470  === [Thread-3] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:14:13.472  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown initiated...
+2021-11-14 01:14:13.480  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown completed.
+2021-11-14 01:19:49.636  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Starting BidListControllerTest on limes-macbook-pro.home with PID 66713 (started by lime in /Users/lime/IdeaProjects/Openclassrooms/Poseidon)
+2021-11-14 01:19:49.638  === [main] === DEBUG === c.nnk.springboot.controllers.BidListControllerTest ===  Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-11-14 01:19:49.640  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  No active profile set, falling back to default profiles: default
+2021-11-14 01:19:49.677  === [main] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@20b12f8a
+2021-11-14 01:19:51.220  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-14 01:19:51.401  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Finished Spring Data repository scanning in 171ms. Found 6 repository interfaces.
+2021-11-14 01:19:52.210  === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ===  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$557d03d3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-14 01:19:53.234  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Starting...
+2021-11-14 01:19:53.452  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Start completed.
+2021-11-14 01:19:54.228  === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:19:55.520  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: Ant [pattern='/css/**'], []
+2021-11-14 01:19:55.614  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20f6b6e0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c5d376c, org.springframework.security.web.header.HeaderWriterFilter@1f7fcec2, org.springframework.security.web.authentication.logout.LogoutFilter@117069f2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4abdd5e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@615e7fe7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b0575d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67cd84f9, org.springframework.security.web.session.SessionManagementFilter@7a71ebf1, org.springframework.security.web.access.ExceptionTranslationFilter@72bdbfe9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3d3a28b5]
+2021-11-14 01:19:55.946  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-11-14 01:19:56.158  === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:19:56.171  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerAdapter ===  ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-14 01:19:56.238  === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration ===  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-14 01:19:56.332  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  42 mappings in 'requestMappingHandlerMapping'
+2021-11-14 01:19:56.372  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-14 01:19:56.387  === [main] === DEBUG === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ===  ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-14 01:19:56.758  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping filters: springSecurityFilterChain urls=[/*], characterEncodingFilter urls=[/*], hiddenHttpMethodFilter urls=[/*], formContentFilter urls=[/*], requestContextFilter urls=[/*]
+2021-11-14 01:19:56.759  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping servlets: 
+2021-11-14 01:19:56.782  === [main] === INFO  === o.s.b.test.mock.web.SpringBootMockServletContext ===  Initializing Spring TestDispatcherServlet ''
+2021-11-14 01:19:56.783  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Initializing Servlet ''
+2021-11-14 01:19:56.794  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Completed initialization in 11 ms
+2021-11-14 01:19:56.822  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Started BidListControllerTest in 7.656 seconds (JVM running for 9.162)
+2021-11-14 01:19:56.995  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.home(org.springframework.ui.Model)
+2021-11-14 01:19:57.240  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:19:57.536  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.addBidForm(com.nnk.springboot.domain.BidList)
+2021-11-14 01:19:57.543  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:19:57.659  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.validate(com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:19:57.797  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:19:57.845  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.updateBid(java.lang.Integer,com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:19:57.862  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:19:57.947  === [main] === INFO  === com.nnk.springboot.services.BidListServiceImpl ===  New BidList BidList(BidListId=176, account=account to delete, type=type to delete, bidQuantity=1.0) is created!
+2021-11-14 01:19:57.967  === [Thread-3] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Closing org.springframework.web.context.support.GenericWebApplicationContext@20b12f8a, started on Sun Nov 14 01:19:49 CET 2021
+2021-11-14 01:19:57.976  === [Thread-3] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:19:57.980  === [Thread-3] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:19:57.983  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown initiated...
+2021-11-14 01:19:57.991  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown completed.
+2021-11-14 01:20:36.886  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Starting BidListControllerTest on limes-macbook-pro.home with PID 66722 (started by lime in /Users/lime/IdeaProjects/Openclassrooms/Poseidon)
+2021-11-14 01:20:36.887  === [main] === DEBUG === c.nnk.springboot.controllers.BidListControllerTest ===  Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-11-14 01:20:36.889  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  No active profile set, falling back to default profiles: default
+2021-11-14 01:20:36.928  === [main] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3401a114
+2021-11-14 01:20:38.216  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-14 01:20:38.455  === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ===  Finished Spring Data repository scanning in 231ms. Found 6 repository interfaces.
+2021-11-14 01:20:39.110  === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ===  Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3679b446] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-14 01:20:39.978  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Starting...
+2021-11-14 01:20:40.142  === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Start completed.
+2021-11-14 01:20:40.910  === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:20:42.262  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: Ant [pattern='/css/**'], []
+2021-11-14 01:20:42.384  === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ===  Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58ad0586, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f4029e9, org.springframework.security.web.header.HeaderWriterFilter@73d7d676, org.springframework.security.web.authentication.logout.LogoutFilter@690677de, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3d3a28b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c5cd2ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36885319, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@526fc044, org.springframework.security.web.session.SessionManagementFilter@3023f157, org.springframework.security.web.access.ExceptionTranslationFilter@8f589d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43ca96a0]
+2021-11-14 01:20:42.738  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-11-14 01:20:42.955  === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:20:42.967  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerAdapter ===  ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-14 01:20:43.007  === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration ===  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-14 01:20:43.090  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  42 mappings in 'requestMappingHandlerMapping'
+2021-11-14 01:20:43.132  === [main] === DEBUG === o.s.web.servlet.handler.SimpleUrlHandlerMapping ===  Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-14 01:20:43.146  === [main] === DEBUG === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ===  ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-14 01:20:43.525  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping filters: springSecurityFilterChain urls=[/*], characterEncodingFilter urls=[/*], hiddenHttpMethodFilter urls=[/*], formContentFilter urls=[/*], requestContextFilter urls=[/*]
+2021-11-14 01:20:43.527  === [main] === DEBUG === o.s.b.web.servlet.ServletContextInitializerBeans ===  Mapping servlets: 
+2021-11-14 01:20:43.548  === [main] === INFO  === o.s.b.test.mock.web.SpringBootMockServletContext ===  Initializing Spring TestDispatcherServlet ''
+2021-11-14 01:20:43.548  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Initializing Servlet ''
+2021-11-14 01:20:43.561  === [main] === INFO  === o.s.test.web.servlet.TestDispatcherServlet ===  Completed initialization in 12 ms
+2021-11-14 01:20:43.597  === [main] === INFO  === c.nnk.springboot.controllers.BidListControllerTest ===  Started BidListControllerTest in 7.151 seconds (JVM running for 8.638)
+2021-11-14 01:20:43.782  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.home(org.springframework.ui.Model)
+2021-11-14 01:20:44.025  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:20:44.318  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.addBidForm(com.nnk.springboot.domain.BidList)
+2021-11-14 01:20:44.327  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:20:44.412  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.validate(com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:20:44.500  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:20:44.530  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.updateBid(java.lang.Integer,com.nnk.springboot.domain.BidList,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2021-11-14 01:20:44.542  === [main] === DEBUG === o.s.w.servlet.view.ContentNegotiatingViewResolver ===  Selected '*/*' given [*/*]
+2021-11-14 01:20:44.660  === [main] === INFO  === com.nnk.springboot.services.BidListServiceImpl ===  New BidList BidList(BidListId=177, account=account to delete, type=type to delete, bidQuantity=1.0) is created!
+2021-11-14 01:20:44.686  === [main] === DEBUG === o.s.w.s.m.m.a.RequestMappingHandlerMapping ===  Mapped to public java.lang.String com.nnk.springboot.controllers.BidListController.deleteBid(java.lang.Integer,org.springframework.ui.Model)
+2021-11-14 01:20:44.702  === [main] === INFO  === com.nnk.springboot.services.BidListServiceImpl ===  Query to find BidList with id 177
+2021-11-14 01:20:44.711  === [main] === INFO  === com.nnk.springboot.services.BidListServiceImpl ===  BidList with id 177 is deleted!
+2021-11-14 01:20:44.723  === [main] === DEBUG === org.springframework.web.servlet.view.RedirectView ===  View name 'redirect:/bidList/list', model {}
+2021-11-14 01:20:44.792  === [Thread-3] === DEBUG === o.s.w.context.support.GenericWebApplicationContext ===  Closing org.springframework.web.context.support.GenericWebApplicationContext@3401a114, started on Sun Nov 14 01:20:36 CET 2021
+2021-11-14 01:20:44.801  === [Thread-3] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ===  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-14 01:20:44.806  === [Thread-3] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ===  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-14 01:20:44.809  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown initiated...
+2021-11-14 01:20:44.818  === [Thread-3] === INFO  === com.zaxxer.hikari.HikariDataSource ===  HikariPool-1 - Shutdown completed.
