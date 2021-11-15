@@ -2,8 +2,12 @@ package com.nnk.springboot.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nnk.springboot.domain.BidList;
+import com.nnk.springboot.repositories.BidListRepository;
 import com.nnk.springboot.services.BidListService;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,22 +18,40 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
 @AutoConfigureMockMvc
 @WithMockUser(username = "Foo", authorities = {"USER"})
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BidListControllerTest {
+    private int id = 0;
 
     @Autowired
     private MockMvc mockMvc;
 
     @Autowired
-    private ObjectMapper objectMapper;
+    private BidListService bidListService;
 
     @Autowired
-    private BidListService bidListService;
+    private BidListRepository bidListRepository;
+
+    @BeforeAll
+    public void init() {
+        BidList bidList = new BidList("init account", "type", 10.0);
+        bidListService.insertBidList(bidList);
+        for (BidList list : bidListService.findAll()) {
+            if (list.getAccount().equals("init account")) {
+                id = list.getBidListId();
+                break;
+            }
+        }
+    }
+
+    @AfterAll
+    public void clean() {
+        bidListRepository.deleteAll();
+    }
 
     @Test
     public void testBidListController() throws Exception {
@@ -42,32 +64,33 @@ public class BidListControllerTest {
                 .andExpect(status().isOk());
 
         // Add
-        BidList bidList = new BidList(111,"account", "type", 20.0);
         this.mockMvc.perform(post("/bidList/validate")
-                        .content(objectMapper.writeValueAsString(bidList))
+                        .param("account", "account")
+                        .param("type", "type")
+                        .param("bidQuantity", "20.0")
                         .accept(MediaType.ALL))
-                .andExpect(status().isOk())
+                .andExpect(redirectedUrl("/bidList/list"))
+                .andExpect(status().isFound())
                 .andReturn();
 
+
+        // Get update form:
+        this.mockMvc.perform(get("/bidList/update/{id}", id)
+                .accept(MediaType.ALL))
+                .andExpect(status().isOk());
+
         // Update
-        BidList newBidList = new BidList(111, "account2", "type2", 22.0);
-        this.mockMvc.perform(post("/bidList/update/111")
-                        .content(objectMapper.writeValueAsString(newBidList))
+        this.mockMvc.perform(post("/bidList/update/{id}", id)
+                        .param("account", "account2")
+                        .param("type", "type2")
+                        .param("bidQuantity", "22.0")
                         .accept(MediaType.ALL))
-                .andExpect(status().isOk())
+                .andExpect(redirectedUrl("/bidList/list"))
+                .andExpect(status().isFound())
                 .andReturn();
 
         // Delete
-        BidList bidToDelete = new BidList("account to delete", "type to delete", 1.0);
-        bidListService.insertBidList(bidToDelete);
-        Integer listId = 0;
-        for (BidList list : bidListService.findAll()) {
-            if (list.getAccount().equals("account to delete")) {
-                listId = list.getBidListId();
-                break;
-            }
-        }
-        this.mockMvc.perform(get("/bidList/delete/{id}", listId))
+        this.mockMvc.perform(get("/bidList/delete/{id}", id))
                 .andDo(print())
                 .andExpect(redirectedUrl("/bidList/list"))
                 .andExpect(status().isFound())
