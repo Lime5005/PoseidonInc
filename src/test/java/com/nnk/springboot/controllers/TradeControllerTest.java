@@ -4,8 +4,12 @@ package com.nnk.springboot.controllers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nnk.springboot.domain.BidList;
 import com.nnk.springboot.domain.Trade;
+import com.nnk.springboot.repositories.TradeRepository;
 import com.nnk.springboot.services.TradeService;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,16 +26,35 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @WithMockUser(username = "Foo", authorities = {"USER"})
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TradeControllerTest {
+    private int id = 0;
 
     @Autowired
     private MockMvc mockMvc;
 
     @Autowired
-    private ObjectMapper objectMapper;
+    private TradeService tradeService;
 
     @Autowired
-    private TradeService tradeService;
+    private TradeRepository tradeRepository;
+
+    @BeforeAll
+    public void init() {
+        Trade trade = new Trade("a", "t", 10.0);
+        tradeService.insertTrade(trade);
+        for (Trade trade1 : tradeService.findAll()) {
+            if (trade1.getAccount().equals("a")) {
+                id = trade1.getTradeId();
+                break;
+            }
+        }
+    }
+
+    @AfterAll
+    public void clean() {
+        tradeRepository.deleteAll();
+    }
 
     @Test
     public void testTradeController() throws Exception {
@@ -44,32 +67,33 @@ public class TradeControllerTest {
                 .andExpect(status().isOk());
 
         // Add
-        Trade trade = new Trade(111, "account", "type", 10.0);
         this.mockMvc.perform(post("/trade/validate")
-                        .content(objectMapper.writeValueAsString(trade))
+                        .param("account", "new acc")
+                        .param("type", "t")
+                        .param("buyQuantity", "10.0")
                         .accept(MediaType.ALL))
-                .andExpect(status().isOk())
+                .andExpect(redirectedUrl("/trade/list"))
+                .andExpect(status().isFound())
                 .andReturn();
 
-        // Update
-        Trade newTrade = new Trade(111, "new account", "type", 10.0);
-        this.mockMvc.perform(post("/trade/update/111")
-                        .content(objectMapper.writeValueAsString(newTrade))
+        // Get update form
+        this.mockMvc.perform(get("/trade/update/{id}", id)
                         .accept(MediaType.ALL))
-                .andExpect(status().isOk())
+                .andExpect(status().isOk());
+
+        // Update
+        this.mockMvc.perform(post("/trade/update/{id}", id)
+                        .param("account", "update acc")
+                        .param("type", "type")
+                        .param("buyQuantity", "20.0")
+                        .accept(MediaType.ALL))
+                .andExpect(redirectedUrl("/trade/list"))
+                .andExpect(status().isFound())
                 .andReturn();
 
         // Delete
-        Trade tradeToDelete = new Trade(1, "account to delete", "type", 10.0);
-        tradeService.insertTrade(tradeToDelete);
-        Integer tradeId = 0;
-        for (Trade trade1 : tradeService.findAll()) {
-            if (trade1.getAccount().equals("account to delete")) {
-                tradeId = trade1.getTradeId();
-                break;
-            }
-        }
-        this.mockMvc.perform(get("/trade/delete/{id}", tradeId))
+
+        this.mockMvc.perform(get("/trade/delete/{id}", id))
                 .andDo(print())
                 .andExpect(redirectedUrl("/trade/list"))
                 .andExpect(status().isFound())

@@ -1,10 +1,12 @@
 package com.nnk.springboot.controllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nnk.springboot.domain.BidList;
 import com.nnk.springboot.domain.Rating;
+import com.nnk.springboot.repositories.RatingRepository;
 import com.nnk.springboot.services.RatingService;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,16 +23,35 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @WithMockUser(username = "Foo", authorities = {"USER"})
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class RatingControllerTest {
+    private int id = 0;
 
     @Autowired
     private MockMvc mockMvc;
 
     @Autowired
-    private ObjectMapper objectMapper;
+    private RatingService ratingService;
 
     @Autowired
-    private RatingService ratingService;
+    private RatingRepository ratingRepository;
+
+    @BeforeAll
+    public void init() {
+        Rating rating = new Rating("m", "s", "fitch rating", 1);
+        ratingService.insertRating(rating);
+        for (Rating rate : ratingService.findAll()) {
+            if (rate.getMoodysRating().equals("m")) {
+                id = rate.getId();
+                break;
+            }
+        }
+    }
+
+    @AfterAll
+    public void clean() {
+        ratingRepository.deleteAll();
+    }
 
     @Test
     public void testBidListController() throws Exception {
@@ -43,32 +64,34 @@ public class RatingControllerTest {
                 .andExpect(status().isOk());
 
         // Add
-        Rating rating = new Rating(111, "moody", "sendP", "fitch", 10);
         this.mockMvc.perform(post("/rating/validate")
-                        .content(objectMapper.writeValueAsString(rating))
+                        .param("moodysRating", "new moody")
+                        .param("sendPRating", "new sendP")
+                        .param("fitchRating", "fitchRating")
+                        .param("orderNumber", "100")
                         .accept(MediaType.ALL))
-                .andExpect(status().isOk())
+                .andExpect(redirectedUrl("/rating/list"))
+                .andExpect(status().isFound())
                 .andReturn();
 
-        // Update
-        Rating newRating = new Rating(111, "moody rating", "sendP rating", "fitch rating", 1);
-        this.mockMvc.perform(post("/rating/update/111")
-                        .content(objectMapper.writeValueAsString(newRating))
+        // Get update form
+        this.mockMvc.perform(get("/rating/update/{id}", id)
                         .accept(MediaType.ALL))
-                .andExpect(status().isOk())
+                .andExpect(status().isOk());
+
+        // Update
+        this.mockMvc.perform(post("/rating/update/{id}", id)
+                        .param("moodysRating", "update moody")
+                        .param("sendPRating", "update sendP")
+                        .param("fitchRating", "fitchRating")
+                        .param("orderNumber", "100")
+                        .accept(MediaType.ALL))
+                .andExpect(redirectedUrl("/rating/list"))
+                .andExpect(status().isFound())
                 .andReturn();
 
         // Delete
-        Rating ratingToDelete = new Rating(1, "m", "s", "fitch rating", 1);
-        ratingService.insertRating(ratingToDelete);
-        Integer ratingId = 0;
-        for (Rating rate : ratingService.findAll()) {
-            if (rate.getMoodysRating().equals("m")) {
-                ratingId = rate.getId();
-                break;
-            }
-        }
-        this.mockMvc.perform(get("/rating/delete/{id}", ratingId))
+        this.mockMvc.perform(get("/rating/delete/{id}", id))
                 .andDo(print())
                 .andExpect(redirectedUrl("/rating/list"))
                 .andExpect(status().isFound())

@@ -1,6 +1,5 @@
 package com.nnk.springboot.controllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nnk.springboot.domain.BidList;
 import com.nnk.springboot.repositories.BidListRepository;
 import com.nnk.springboot.services.BidListService;
@@ -74,7 +73,7 @@ public class BidListControllerTest {
                 .andReturn();
 
 
-        // Get update form:
+        // Get update form
         this.mockMvc.perform(get("/bidList/update/{id}", id)
                 .accept(MediaType.ALL))
                 .andExpect(status().isOk());

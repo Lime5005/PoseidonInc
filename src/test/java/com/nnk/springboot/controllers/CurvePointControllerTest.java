@@ -2,8 +2,12 @@ package com.nnk.springboot.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nnk.springboot.domain.CurvePoint;
+import com.nnk.springboot.repositories.CurvePointRepository;
 import com.nnk.springboot.services.CurvePointService;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,16 +24,35 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @WithMockUser(username = "Foo", authorities = {"USER"})
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class CurvePointControllerTest {
+    private int id = 0;
 
     @Autowired
     private MockMvc mockMvc;
 
     @Autowired
-    private ObjectMapper objectMapper;
+    private CurvePointService curvePointService;
 
     @Autowired
-    private CurvePointService curvePointService;
+    private CurvePointRepository curvePointRepository;
+
+    @BeforeAll
+    public void init() {
+        CurvePoint curvePoint = new CurvePoint(111, 1.0, 1.0);
+        curvePointService.insertCurvePoint(curvePoint);
+        for (CurvePoint curve : curvePointService.findAll()) {
+            if (curve.getCurveId() == 111) {
+                id = curve.getId();
+                break;
+            }
+        }
+    }
+
+    @AfterAll
+    public void clean() {
+        curvePointRepository.deleteAll();
+    }
 
     @Test
     public void testCurvePointController() throws Exception {
@@ -42,32 +65,33 @@ public class CurvePointControllerTest {
                 .andExpect(status().isOk());
 
         // Add
-        CurvePoint curvePoint = new CurvePoint(999, 22.0, 33.0);
         this.mockMvc.perform(post("/curvePoint/validate")
-                        .content(objectMapper.writeValueAsString(curvePoint))
+                        .param("curveId", "999")
+                        .param("term", "22.0")
+                        .param("value", "33.0")
                         .accept(MediaType.ALL))
-                .andExpect(status().isOk())
+                .andExpect(redirectedUrl("/curvePoint/list"))
+                .andExpect(status().isFound())
                 .andReturn();
 
-        // Update
-        CurvePoint newCurvePoint = new CurvePoint(999, 33.0, 33.0);
-        this.mockMvc.perform(post("/curvePoint/update/999")
-                        .content(objectMapper.writeValueAsString(newCurvePoint))
+        // Get update form
+        this.mockMvc.perform(get("/curvePoint/update/{id}", id)
                         .accept(MediaType.ALL))
-                .andExpect(status().isOk())
+                .andExpect(status().isOk());
+
+
+        // Update
+        this.mockMvc.perform(post("/curvePoint/update/{id}", id)
+                        .param("curveId", "888")
+                        .param("term", "33.0")
+                        .param("value", "44.0")
+                        .accept(MediaType.ALL))
+                .andExpect(redirectedUrl("/curvePoint/list"))
+                .andExpect(status().isFound())
                 .andReturn();
 
         // Delete
-        CurvePoint curvePointToDelete = new CurvePoint(111, 1.0, 1.0);
-        curvePointService.insertCurvePoint(curvePointToDelete);
-        Integer curveId = 0;
-        for (CurvePoint curve : curvePointService.findAll()) {
-            if (curve.getCurveId() == 111) {
-                curveId = curve.getId();
-                break;
-            }
-        }
-        this.mockMvc.perform(get("/curvePoint/delete/{id}", curveId))
+        this.mockMvc.perform(get("/curvePoint/delete/{id}", id))
                 .andDo(print())
                 .andExpect(redirectedUrl("/curvePoint/list"))
                 .andExpect(status().isFound())
