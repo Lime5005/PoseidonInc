@@ -2,10 +2,7 @@ package com.nnk.springboot.services;
 
 import com.nnk.springboot.domain.Rating;
 import com.nnk.springboot.repositories.RatingRepository;
-import org.junit.Assert;
-import org.junit.FixMethodOrder;
 import org.junit.jupiter.api.*;
-import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
