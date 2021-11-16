@@ -29,3 +29,30 @@
 ## Security
 1. Create user service to load user from  database and place in package com.nnk.springboot.services
 2. Add configuration class and place in package com.nnk.springboot.config
+3. Add Authorization: redirect based on Role
+
+To start the project, add in `application.properties`:
+```properties
+logging.level.com.nnk.springboot=Debug
+logging.level.web=debug
+logging.level.org.hibernate=error
+logging.file=log/poseidon-app.log
+
+logging.pattern.console=%d{yyyy-MM-dd} [%thread] %-5level %logger{50} - %msg%n
+logging.pattern.file=%d{yyyy-MM-dd HH:mm:ss.SSS}  === [%thread] === %-5level === %logger{50} ===  %msg%n
+
+################### DataSource Configuration ##########################
+spring.jpa.database=mysql
+spring.jpa.database-platform=mysql
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/poseidon?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&characterEncoding=utf8&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+spring.datasource.username=ur_username
+spring.datasource.password=ur_password
+
+################### Hibernate Configuration ##########################
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+server.error.whitelabel.enabled=false
+```
