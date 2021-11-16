@@ -56,3 +56,6 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 server.error.whitelabel.enabled=false
 ```
+
+## Test Coverage
+<img width="1069" alt="Jacoco_cover_P7" src="https://user-images.githubusercontent.com/65612959/141878273-a607d816-867c-42a5-a357-967eb30449ed.png">
