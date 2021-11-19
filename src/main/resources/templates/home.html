@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <title> Spring Boot </title>
@@ -8,6 +9,7 @@
 <body>
 <h3> HOME PAGE </h3>
 <p>
+    <p><span th:text="${name}"></span></p>
     <a href="/logout">Logout</a><br>
     <a href="/user/list" sec:authorize="hasAuthority('ADMIN')">User management</a><br>
     <a href="/bidList/list">BidList</a>
