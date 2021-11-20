@@ -38,6 +38,9 @@ logging.level.web=debug
 logging.level.org.hibernate=error
 logging.file=log/poseidon-app.log
 
+spring.security.oauth2.client.registration.github.client-id={github_client_ID}
+spring.security.oauth2.client.registration.github.client-secret={github_Secret}
+
 logging.pattern.console=%d{yyyy-MM-dd} [%thread] %-5level %logger{50} - %msg%n
 logging.pattern.file=%d{yyyy-MM-dd HH:mm:ss.SSS}  === [%thread] === %-5level === %logger{50} ===  %msg%n
 
