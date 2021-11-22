@@ -3,10 +3,7 @@ package com.nnk.springboot.domain;
 import lombok.*;
 
 import javax.persistence.*;
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.*;
 
 @Entity
 @Getter
@@ -22,15 +19,18 @@ public class BidList {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer BidListId;
 
+    @Pattern(regexp="^[A-Za-z]*$", message = "Input has to be text")
     @NotBlank(message = "Account is mandatory")
     @Column(name = "account", unique = true)
     private String account;
 
+    @Pattern(regexp="^[A-Za-z]*$", message = "Input has to be text")
     @NotBlank(message = "Type is mandatory")
     private String type;
 
     @Digits(integer = 20, fraction = 2)
     @Min(value = 0L, message = "The value must be positive")
+    @NotNull(message = "Numbers has to be present")
     private Double bidQuantity;
 
     public BidList(String account, String type, Double bidQuantity) {
